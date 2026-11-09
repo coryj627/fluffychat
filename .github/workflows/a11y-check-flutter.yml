@@ -1,0 +1,75 @@
+# Dogfood workflow for the krille-chan/fluffychat fork: scans the app with
+# a11y-check-flutter on every push and PR. Review-only — the committed
+# .a11y/flutter/baseline.json is the accepted floor, so the job fails only on a
+# NEW finding at or above the config's fail_at.
+#
+# One-time setup in the fork:
+#   1. Secret FLUTTER_A11Y_READ_TOKEN: a fine-grained PAT with Contents: Read-only
+#      on coryj627/flutter-a11y (private). It lets `pub get` fetch flutter_a11y_test
+#      and `dart pub global activate` fetch the CLI.
+#   2. Code scanning must be enabled on the fork for the SARIF upload step.
+#
+# This fork is public and coryj627/flutter-a11y is private: a public repository can
+# never `uses:` an action from a private one, so the action is checked out with the
+# read token and run as a local action.
+#
+# `flutter test` builds the webcrypto native asset with cmake (present on the
+# ubuntu runner) and needs the system sqlite for sqflite_common_ffi.
+name: a11y-check-flutter
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  security-events: write # github/codeql-action/upload-sarif
+
+jobs:
+  a11y:
+    name: a11y-check-flutter
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: 3.47.9
+          cache: true
+
+      - name: Install requirements for sqflite_common_ffi
+        run: sudo apt-get -y install libsqlite3-0 libsqlite3-dev
+
+      - name: Read access to coryj627/flutter-a11y (private)
+        env:
+          TOKEN: ${{ secrets.FLUTTER_A11Y_READ_TOKEN }}
+        run: |
+          git config --global url."https://x-access-token:${TOKEN}@github.com/".insteadOf "https://github.com/"
+
+      - name: Fetch the a11y-check-flutter action
+        uses: actions/checkout@v4
+        with:
+          repository: coryj627/flutter-a11y
+          ref: main
+          token: ${{ secrets.FLUTTER_A11Y_READ_TOKEN }}
+          path: .flutter-a11y
+
+      # Only the audit tests feed the runtime report; the rest of the suite runs in
+      # the app's own workflow.
+      - name: Scan (pub get → flutter test test/a11y → a11y_check_flutter scan)
+        id: a11y
+        uses: ./.flutter-a11y
+        with:
+          ref: main
+          test-args: test/a11y
+
+      - name: Upload SARIF to code scanning
+        if: always() && steps.a11y.outputs.sarif != ''
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: ${{ steps.a11y.outputs.sarif }}
+          category: a11y-check-flutter

@@ -98,6 +98,11 @@ dev_dependencies:
   dart_code_linter: ^4.4.4
   flutter_launcher_icons: ^0.14.4
   flutter_lints: ^6.0.0
+  flutter_a11y_test:
+    git:
+      url: https://github.com/coryj627/flutter-a11y.git
+      ref: main
+      path: packages/flutter_a11y_test
   flutter_test:
     sdk: flutter
   golden_screenshot: ^12.1.1

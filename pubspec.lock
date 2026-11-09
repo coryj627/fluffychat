@@ -566,6 +566,24 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_a11y_core:
+    dependency: transitive
+    description:
+      path: "packages/flutter_a11y_core"
+      ref: "654ee3e75fc7ab628c8db936a73ac0c011d683a2"
+      resolved-ref: "654ee3e75fc7ab628c8db936a73ac0c011d683a2"
+      url: "https://github.com/coryj627/flutter-a11y.git"
+    source: git
+    version: "0.1.0"
+  flutter_a11y_test:
+    dependency: "direct dev"
+    description:
+      path: "packages/flutter_a11y_test"
+      ref: main
+      resolved-ref: "654ee3e75fc7ab628c8db936a73ac0c011d683a2"
+      url: "https://github.com/coryj627/flutter-a11y.git"
+    source: git
+    version: "0.1.0"
   flutter_callkit_incoming:
     dependency: "direct main"
     description:
