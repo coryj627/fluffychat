@@ -137,6 +137,12 @@ Future<void> _audit(
   // cached-password clear at 10 min) fire before the tree is disposed.
   await tester.pump(const Duration(minutes: 11));
   _dropKnown(tester);
+  // Take the app down ourselves: FakeMatrixApi answers every request through a 1 ms
+  // timer, and a live app keeps requesting, so there is always one pending when the
+  // framework disposes the tree at the end of the test.
+  await tester.pumpWidget(const SizedBox.shrink());
+  await tester.pump(const Duration(seconds: 1));
+  _dropKnown(tester);
   // ignore: avoid_print
   print(
     'a11y $screenId at ${FluffyChatApp.router.routerDelegate.currentConfiguration.uri}: '
@@ -198,10 +204,14 @@ void main() {
       ),
       // access: ChatAccessSettingsController.roomVersion needs the room's m.room.create
       // version, which FakeMatrixApi's room does not carry (null check in the app).
-      // permissions: left out. The in-place text-scale pass trips a Flutter framework
-      // assertion (_debugRelayoutBoundaryAlreadyMarkedNeedsLayout) under this page's
-      // DropdownButtons; ReflowStrategy.rewrapRoot avoids that but re-creates the app
-      // and leaves a timer pending at the end of the test.
+      // The in-place text-scale pass trips a Flutter framework assertion
+      // (_debugRelayoutBoundaryAlreadyMarkedNeedsLayout) under this page's
+      // DropdownButtons; fresh render objects avoid it.
+      (
+        'rooms/chat/permissions',
+        '/rooms/$room/details/permissions',
+        const A11yAuditConfig(reflowStrategy: ReflowStrategy.rewrapRoot),
+      ),
       ('settings', '/rooms/settings', const A11yAuditConfig()),
       (
         'settings/notifications',

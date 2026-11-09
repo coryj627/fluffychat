@@ -8,13 +8,13 @@
   },
   "matcher_version": "2",
   "created_at": "2026-11-09T18:47:55.443967Z",
-  "updated_at": "2026-11-09T19:58:54.110280Z",
+  "updated_at": "2026-11-09T20:15:07.550470Z",
   "summary": {
-    "finding_count": 184,
+    "finding_count": 185,
     "by_severity": {
       "error": 144,
       "warning": 16,
-      "info": 24
+      "info": 25
     }
   },
   "findings": [
@@ -1077,6 +1077,19 @@
       "line": 108,
       "column": 34,
       "message_hash": "sha256:0b7a247a67344078"
+    },
+    {
+      "id": "sha256:b55d4f72c9e45227dc88342cfe2c837ee708735676542110d1d2d8cd3e6dfb95",
+      "rule_id": "flutter/runtime/no-heading-on-screen",
+      "layer": "runtime",
+      "wcag_criterion": "1.3.1",
+      "wcag_guideline": "1.3",
+      "severity": "info",
+      "file_path": "lib/pages/chat_permissions_settings/chat_permissions_settings_view.dart",
+      "line": 27,
+      "column": 16,
+      "message_hash": "sha256:7d1f5a680820833f",
+      "screen_id": "rooms/chat/permissions"
     },
     {
       "id": "sha256:d5f7c66849cfd7ce9b7a4e2ad2f19badf41ea7d9d19ddc50a710ccda9b2a1b90",
