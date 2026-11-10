@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
   "tool": "a11y-check-flutter",
-  "tool_version": "0.2.1",
+  "tool_version": "0.3.0",
   "engines": {
-    "static": "0.2.1",
-    "runtime": "0.2.1"
+    "static": "0.3.0",
+    "runtime": "0.3.0"
   },
   "matcher_version": "2",
   "created_at": "2026-11-09T18:47:55.443967Z",
-  "updated_at": "2026-11-09T22:29:00.497413Z",
+  "updated_at": "2026-11-10T04:30:33.707113Z",
   "summary": {
-    "finding_count": 185,
+    "finding_count": 182,
     "by_severity": {
-      "error": 144,
-      "warning": 16,
+      "error": 143,
+      "warning": 14,
       "info": 25
     }
   },
@@ -607,46 +607,6 @@
       "message_hash": "sha256:6b2204b22ada7ed9",
       "occurrence_key": "1",
       "screen_id": "rooms/chat/members"
-    },
-    {
-      "id": "sha256:b03994cf792e2c2d86a2262571aed886e285154aed224e495e5022b6c60f2726",
-      "rule_id": "flutter/runtime/tap-target-too-small",
-      "layer": "runtime",
-      "wcag_criterion": "2.5.5",
-      "wcag_guideline": "2.5",
-      "severity": "warning",
-      "file_path": "lib/pages/chat_details/chat_details_view.dart",
-      "line": 335,
-      "column": 36,
-      "message_hash": "sha256:93bee01c2edf1c86",
-      "screen_id": "rooms/chat/details"
-    },
-    {
-      "id": "sha256:40f3f5f4093f090d5792cbcd9fb8089be3abaccaefe9a733f7bf841a3b814ea0",
-      "rule_id": "flutter/runtime/tap-target-too-small",
-      "layer": "runtime",
-      "wcag_criterion": "2.5.5",
-      "wcag_guideline": "2.5",
-      "severity": "warning",
-      "file_path": "lib/pages/chat_details/chat_details_view.dart",
-      "line": 335,
-      "column": 36,
-      "message_hash": "sha256:8d487a80775d2a07",
-      "occurrence_key": "1",
-      "screen_id": "rooms/chat/details"
-    },
-    {
-      "id": "sha256:6fd40e66478072851d518bb49460601cb3ce1b789ccc90a76893c4f05c00b9f7",
-      "rule_id": "flutter/runtime/textfield-missing-label",
-      "layer": "runtime",
-      "wcag_criterion": "3.3.2",
-      "wcag_guideline": "3.3",
-      "severity": "error",
-      "file_path": "lib/pages/chat_details/chat_details_view.dart",
-      "line": 335,
-      "column": 36,
-      "message_hash": "sha256:e175c920def26217",
-      "screen_id": "rooms/chat/details"
     },
     {
       "id": "sha256:0eac4c928ab5f6be588b1fd2bb152e7391518bb84f35bb44dbc2461bebb83de8",
