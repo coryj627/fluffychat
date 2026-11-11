@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
   "tool": "a11y-check-flutter",
-  "tool_version": "0.3.0",
+  "tool_version": "0.4.0",
   "engines": {
-    "static": "0.3.0",
-    "runtime": "0.3.0"
+    "static": "0.4.0",
+    "runtime": "0.4.0"
   },
   "matcher_version": "2",
   "created_at": "2026-11-09T18:47:55.443967Z",
-  "updated_at": "2026-11-10T04:30:33.707113Z",
+  "updated_at": "2026-11-11T03:08:02.031103Z",
   "summary": {
-    "finding_count": 182,
+    "finding_count": 184,
     "by_severity": {
-      "error": 143,
-      "warning": 14,
+      "error": 140,
+      "warning": 19,
       "info": 25
     }
   },
@@ -686,6 +686,19 @@
       "message_hash": "sha256:e9454f1c8061741c"
     },
     {
+      "id": "sha256:4e453bc080f695787891e948ddd4a17d7fdb64a2c15e3f124eed1b70055e5e85",
+      "rule_id": "flutter/runtime/textfield-placeholder-only",
+      "layer": "runtime",
+      "wcag_criterion": "3.3.2",
+      "wcag_guideline": "3.3",
+      "severity": "warning",
+      "file_path": "lib/pages/chat_list/chat_list_header.dart",
+      "line": 33,
+      "column": 12,
+      "message_hash": "sha256:54ab3fcbe9d9e442",
+      "screen_id": "rooms"
+    },
+    {
       "id": "sha256:e8c9006be58db30744bff569b3129a89f3408f275918da07c607e7da451396a6",
       "rule_id": "flutter/static/textfield-missing-label",
       "layer": "static",
@@ -1025,6 +1038,19 @@
       "line": 51,
       "column": 13,
       "message_hash": "sha256:e9454f1c8061741c"
+    },
+    {
+      "id": "sha256:6138111d248cc0c7ca02dc9bcb47b6959fe82de7e334773a946e987d17f81199",
+      "rule_id": "flutter/runtime/textfield-placeholder-only",
+      "layer": "runtime",
+      "wcag_criterion": "3.3.2",
+      "wcag_guideline": "3.3",
+      "severity": "warning",
+      "file_path": "lib/pages/chat_members/chat_members_view.dart",
+      "line": 108,
+      "column": 34,
+      "message_hash": "sha256:54ab3fcbe9d9e442",
+      "screen_id": "rooms/chat/members"
     },
     {
       "id": "sha256:a04b6203d8f4a70d4fb04011dd1c2168fb7943d56dd843f900ede85d29cec917",
@@ -1368,6 +1394,19 @@
       "screen_id": "rooms/newprivatechat"
     },
     {
+      "id": "sha256:0a72897c62e7bde09bf142bc3367a3383905083df52d0798392b8356a191d76b",
+      "rule_id": "flutter/runtime/textfield-placeholder-only",
+      "layer": "runtime",
+      "wcag_criterion": "3.3.2",
+      "wcag_guideline": "3.3",
+      "severity": "warning",
+      "file_path": "lib/pages/new_private_chat/new_private_chat_view.dart",
+      "line": 50,
+      "column": 22,
+      "message_hash": "sha256:54ab3fcbe9d9e442",
+      "screen_id": "rooms/newprivatechat"
+    },
+    {
       "id": "sha256:f56ab7957442780f543088e7f7b588550cf5c81f72f5afb964a3c2f6de103a79",
       "rule_id": "flutter/static/textfield-missing-label",
       "layer": "static",
@@ -1390,19 +1429,6 @@
       "line": 87,
       "column": 25,
       "message_hash": "sha256:e9454f1c8061741c"
-    },
-    {
-      "id": "sha256:1a3cac578ebfdabf7bad89b02554bc2fcdf10c9d3a17974636bb5371c1d93dc8",
-      "rule_id": "flutter/runtime/textfield-missing-label",
-      "layer": "runtime",
-      "wcag_criterion": "3.3.2",
-      "wcag_guideline": "3.3",
-      "severity": "error",
-      "file_path": "lib/pages/new_private_chat/new_private_chat_view.dart",
-      "line": 107,
-      "column": 51,
-      "message_hash": "sha256:e175c920def26217",
-      "screen_id": "rooms/newprivatechat"
     },
     {
       "id": "sha256:c4e0ee18282f2788a0ce78d0838ebf8f3037717d1125bc93cd5fe44352711d51",
@@ -2007,29 +2033,29 @@
       "screen_id": "home/sign_in"
     },
     {
-      "id": "sha256:cc1f6b2201d1cb6554fe5e11b0163ca7ee2587ec1a563f32208378dd9f8b24af",
-      "rule_id": "flutter/runtime/textfield-missing-label",
+      "id": "sha256:78bf542a80cfd4b3b22c9e04181e3af77188e970c78d4da8042412a2635c4561",
+      "rule_id": "flutter/runtime/textfield-placeholder-only",
       "layer": "runtime",
       "wcag_criterion": "3.3.2",
       "wcag_guideline": "3.3",
-      "severity": "error",
+      "severity": "warning",
       "file_path": "lib/pages/sign_in/sign_in_page.dart",
-      "line": 56,
+      "line": 62,
       "column": 17,
-      "message_hash": "sha256:e175c920def26217",
+      "message_hash": "sha256:54ab3fcbe9d9e442",
       "screen_id": "home/sign_in"
     },
     {
-      "id": "sha256:44be5a56265ccddccd83ab62d1a7c701bf4fcd5b08935c446dbfbf12793faa83",
-      "rule_id": "flutter/runtime/textfield-missing-label",
+      "id": "sha256:dd9e985ffad2900362c6e1ba8314a268615410c9f4f6b39252b86e04202e944d",
+      "rule_id": "flutter/runtime/textfield-placeholder-only",
       "layer": "runtime",
       "wcag_criterion": "3.3.2",
       "wcag_guideline": "3.3",
-      "severity": "error",
+      "severity": "warning",
       "file_path": "lib/pages/sign_in/sign_in_page.dart",
-      "line": 56,
+      "line": 62,
       "column": 17,
-      "message_hash": "sha256:e175c920def26217",
+      "message_hash": "sha256:54ab3fcbe9d9e442",
       "occurrence_key": "1",
       "screen_id": "home/sign_up"
     },
