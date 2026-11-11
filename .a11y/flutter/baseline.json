@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
   "tool": "a11y-check-flutter",
-  "tool_version": "0.5.0",
+  "tool_version": "0.5.1",
   "engines": {
-    "static": "0.5.0",
-    "runtime": "0.5.0"
+    "static": "0.5.1",
+    "runtime": "0.5.1"
   },
   "matcher_version": "2",
   "created_at": "2026-11-09T18:47:55.443967Z",
-  "updated_at": "2026-11-11T17:42:37.621272Z",
+  "updated_at": "2026-11-11T22:40:32.187508Z",
   "summary": {
-    "finding_count": 182,
+    "finding_count": 183,
     "by_severity": {
-      "error": 138,
+      "error": 139,
       "warning": 19,
       "info": 25
     }
@@ -165,41 +165,41 @@
       "message_hash": "sha256:e9454f1c8061741c"
     },
     {
-      "id": "sha256:ff0abae993f1206c5fe4a6106e8ddbe8bcd955735207e26f4e08d45fb4379d45",
+      "id": "sha256:353d26442ae139ef9f34b2933b3f9fec6ff05b66d25ece012cb9eaf718c9fb29",
       "rule_id": "flutter/runtime/interactive-missing-role",
       "layer": "runtime",
       "wcag_criterion": "4.1.2",
       "wcag_guideline": "4.1",
       "severity": "error",
-      "file_path": "lib/pages/chat/chat_view.dart",
-      "line": 84,
-      "column": 23,
+      "file_path": "lib/pages/chat/chat_app_bar_title.dart",
+      "line": 34,
+      "column": 12,
       "message_hash": "sha256:1246417013324ea8",
       "screen_id": "rooms/chat"
     },
     {
-      "id": "sha256:f36b33c990435c4a438c254a6c656966476d05a75314545d4ecb3f24aadf2390",
+      "id": "sha256:f0f5da0e6dce2c1c4332d323f01944fb163e099586186382be39d67a33e23ec4",
       "rule_id": "flutter/runtime/tap-target-too-small",
       "layer": "runtime",
       "wcag_criterion": "2.5.5",
       "wcag_guideline": "2.5",
       "severity": "warning",
-      "file_path": "lib/pages/chat/chat_view.dart",
-      "line": 84,
-      "column": 23,
+      "file_path": "lib/pages/chat/chat_app_bar_title.dart",
+      "line": 34,
+      "column": 12,
       "message_hash": "sha256:93bee01c2edf1c86",
       "screen_id": "rooms/chat"
     },
     {
-      "id": "sha256:305854826fea52966100169b66ffb6bfd400685cc9bd5b4cf857557b7b0a1ce8",
+      "id": "sha256:72098c0c491b9657b280c68035edcbcbbd819da6f7f4f7f6eb82340a2c2afd78",
       "rule_id": "flutter/runtime/tap-target-too-small",
       "layer": "runtime",
       "wcag_criterion": "2.5.5",
       "wcag_guideline": "2.5",
       "severity": "warning",
-      "file_path": "lib/pages/chat/chat_view.dart",
-      "line": 84,
-      "column": 23,
+      "file_path": "lib/pages/chat/chat_app_bar_title.dart",
+      "line": 34,
+      "column": 12,
       "message_hash": "sha256:8d487a80775d2a07",
       "occurrence_key": "1",
       "screen_id": "rooms/chat"
@@ -555,6 +555,19 @@
       "message_hash": "sha256:e9454f1c8061741c"
     },
     {
+      "id": "sha256:23ec97b3f35ed6523b172896c69613ecb3ba858cfb4be7417c33262c73563478",
+      "rule_id": "flutter/runtime/no-heading-on-screen",
+      "layer": "runtime",
+      "wcag_criterion": "1.3.1",
+      "wcag_guideline": "1.3",
+      "severity": "info",
+      "file_path": "lib/pages/chat_details/chat_details_view.dart",
+      "line": 103,
+      "column": 20,
+      "message_hash": "sha256:7d1f5a680820833f",
+      "screen_id": "rooms/chat/details"
+    },
+    {
       "id": "sha256:4c478a6620db19d5dd394dc4d88b03a6f1bfb36dbf35a016bcbe381c4cc8e71f",
       "rule_id": "flutter/runtime/content-overflow-at-reflow-width",
       "layer": "runtime",
@@ -568,7 +581,7 @@
       "screen_id": "rooms/chat/details"
     },
     {
-      "id": "sha256:c556d4a401cafc3e6b72fb65c0ead15c82dbe41e98d2c257d149a51f513dc3da",
+      "id": "sha256:b3e30310c0ec9b191f29a1c09290a6a5499ceaecadb8c4babd68f78c39f5ea69",
       "rule_id": "flutter/runtime/text-overflow-at-scale",
       "layer": "runtime",
       "wcag_criterion": "1.4.4",
@@ -577,7 +590,7 @@
       "file_path": "lib/pages/chat_details/chat_details_view.dart",
       "line": 232,
       "column": 38,
-      "message_hash": "sha256:6b2204b22ada7ed9",
+      "message_hash": "sha256:deaaaf76084b9d2c",
       "screen_id": "rooms/chat/details"
     },
     {
@@ -658,15 +671,15 @@
       "message_hash": "sha256:e9454f1c8061741c"
     },
     {
-      "id": "sha256:4e453bc080f695787891e948ddd4a17d7fdb64a2c15e3f124eed1b70055e5e85",
+      "id": "sha256:c44116b5fcd5ebbc8c0617fa77a002aba8ec0222d68d84ad786cb96ecc23cf5d",
       "rule_id": "flutter/runtime/textfield-placeholder-only",
       "layer": "runtime",
       "wcag_criterion": "3.3.2",
       "wcag_guideline": "3.3",
       "severity": "warning",
       "file_path": "lib/pages/chat_list/chat_list_header.dart",
-      "line": 33,
-      "column": 12,
+      "line": 55,
+      "column": 18,
       "message_hash": "sha256:54ab3fcbe9d9e442",
       "screen_id": "rooms"
     },
@@ -936,6 +949,19 @@
       "line": 142,
       "column": 25,
       "message_hash": "sha256:e9454f1c8061741c"
+    },
+    {
+      "id": "sha256:47dd64f2c705f1fa34a16c29ee185573c8134708d46e954738595d9ce30d1325",
+      "rule_id": "flutter/runtime/text-contrast-insufficient",
+      "layer": "runtime",
+      "wcag_criterion": "1.4.3",
+      "wcag_guideline": "1.4",
+      "severity": "error",
+      "file_path": "lib/pages/chat_list/client_chooser_button.dart",
+      "line": 182,
+      "column": 16,
+      "message_hash": "sha256:e94dde2e5aea1fc5",
+      "screen_id": "rooms"
     },
     {
       "id": "sha256:9e8363ed8f6c338a052e313ce47815040af2171d242fa2c90eb2e79b17ebe568",
@@ -1429,6 +1455,19 @@
       "screen_id": "rooms/newprivatechat"
     },
     {
+      "id": "sha256:cf6bca7a21efc6027b5088463a52f14abea7ba1f191d1e176bf576664b11c6fb",
+      "rule_id": "flutter/runtime/no-heading-on-screen",
+      "layer": "runtime",
+      "wcag_criterion": "1.3.1",
+      "wcag_guideline": "1.3",
+      "severity": "info",
+      "file_path": "lib/pages/settings/settings_view.dart",
+      "line": 36,
+      "column": 16,
+      "message_hash": "sha256:7d1f5a680820833f",
+      "screen_id": "settings"
+    },
+    {
       "id": "sha256:37b97ac681668c1b63d57a42a91d5f97f1c364fb295dfa30eba4da41ab0e079d",
       "rule_id": "flutter/runtime/no-heading-on-screen",
       "layer": "runtime",
@@ -1541,55 +1580,55 @@
       "screen_id": "settings/notifications"
     },
     {
-      "id": "sha256:42834b7c940c88d826c3102aa0b627eeb06629ee7a69ae6570c4685e0b11071e",
+      "id": "sha256:15ff04dcf24125443b15ff01aeab82488cedc118d93da3e5de6e0cc61226c5f9",
       "rule_id": "flutter/runtime/interactive-missing-role",
       "layer": "runtime",
       "wcag_criterion": "4.1.2",
       "wcag_guideline": "4.1",
       "severity": "error",
       "file_path": "lib/pages/settings_notifications/settings_notifications_view.dart",
-      "line": 92,
+      "line": 102,
       "column": 42,
       "message_hash": "sha256:1246417013324ea8",
       "screen_id": "settings/notifications"
     },
     {
-      "id": "sha256:56b6fc76173bb43f78b67c8dd2ca819871b34dc4a87addf29346ce366c490436",
+      "id": "sha256:381678e78c06c244ad1464c6f92eb3a25ec96ace9526ca526884efaef79aa900",
       "rule_id": "flutter/runtime/interactive-missing-role",
       "layer": "runtime",
       "wcag_criterion": "4.1.2",
       "wcag_guideline": "4.1",
       "severity": "error",
       "file_path": "lib/pages/settings_notifications/settings_notifications_view.dart",
-      "line": 92,
+      "line": 102,
       "column": 42,
       "message_hash": "sha256:1246417013324ea8",
       "occurrence_key": "1",
       "screen_id": "settings/notifications"
     },
     {
-      "id": "sha256:08dae9b5a584ed195f4bccf2f1434ea194c3e38806fd5997d74a7e1f8531e76d",
+      "id": "sha256:b809288b800af5b5c7ba9b9c8fafff90f7222f4fb244b593a3ff431d6e2aec78",
       "rule_id": "flutter/runtime/interactive-missing-role",
       "layer": "runtime",
       "wcag_criterion": "4.1.2",
       "wcag_guideline": "4.1",
       "severity": "error",
       "file_path": "lib/pages/settings_notifications/settings_notifications_view.dart",
-      "line": 92,
+      "line": 102,
       "column": 42,
       "message_hash": "sha256:1246417013324ea8",
       "occurrence_key": "2",
       "screen_id": "settings/notifications"
     },
     {
-      "id": "sha256:26ac216cb1d531818d6d296fb0db25a882e72e8d733a04d04d8e1a0c72e8cc75",
+      "id": "sha256:03732013b4244b470052d90ea64caa9149e4489ae7f1b3fade5887244600e7b1",
       "rule_id": "flutter/runtime/interactive-missing-role",
       "layer": "runtime",
       "wcag_criterion": "4.1.2",
       "wcag_guideline": "4.1",
       "severity": "error",
       "file_path": "lib/pages/settings_notifications/settings_notifications_view.dart",
-      "line": 92,
+      "line": 102,
       "column": 42,
       "message_hash": "sha256:1246417013324ea8",
       "occurrence_key": "3",
@@ -2102,33 +2141,6 @@
       "line": 106,
       "column": 38,
       "message_hash": "sha256:59ca830cbff9be20"
-    },
-    {
-      "id": "sha256:e4d2abf2d374e0939fdeeb72144fd5fac1dfca0ea811143cc5f5224501ea37bf",
-      "rule_id": "flutter/runtime/no-heading-on-screen",
-      "layer": "runtime",
-      "wcag_criterion": "1.3.1",
-      "wcag_guideline": "1.3",
-      "severity": "info",
-      "file_path": "lib/widgets/avatar.dart",
-      "line": 101,
-      "column": 30,
-      "message_hash": "sha256:7d1f5a680820833f",
-      "screen_id": "rooms/chat/details"
-    },
-    {
-      "id": "sha256:23ae2f99497da059672140dd9e3dd4744c0985cc808d44f5930165d799f7d5ed",
-      "rule_id": "flutter/runtime/no-heading-on-screen",
-      "layer": "runtime",
-      "wcag_criterion": "1.3.1",
-      "wcag_guideline": "1.3",
-      "severity": "info",
-      "file_path": "lib/widgets/avatar.dart",
-      "line": 101,
-      "column": 30,
-      "message_hash": "sha256:7d1f5a680820833f",
-      "occurrence_key": "1",
-      "screen_id": "settings"
     },
     {
       "id": "sha256:3497d02a036d0370469afa55c8bfe64e9566fc88d81068a8552f4ea3b216a991",
