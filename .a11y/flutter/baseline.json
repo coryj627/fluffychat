@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "tool": "a11y-check-flutter",
-  "tool_version": "0.4.0",
+  "tool_version": "0.4.1",
   "engines": {
-    "static": "0.4.0",
-    "runtime": "0.4.0"
+    "static": "0.4.1",
+    "runtime": "0.4.1"
   },
   "matcher_version": "2",
   "created_at": "2026-11-09T18:47:55.443967Z",
-  "updated_at": "2026-11-11T03:08:02.031103Z",
+  "updated_at": "2026-11-11T13:54:02.732830Z",
   "summary": {
     "finding_count": 184,
     "by_severity": {
