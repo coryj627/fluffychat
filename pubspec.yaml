@@ -101,7 +101,7 @@ dev_dependencies:
   flutter_a11y_test:
     git:
       url: https://github.com/coryj627/flutter-a11y.git
-      ref: 0.4.1
+      ref: 0.4.2
       path: packages/flutter_a11y_test
   flutter_test:
     sdk: flutter
